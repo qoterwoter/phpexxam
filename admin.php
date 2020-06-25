@@ -82,11 +82,10 @@
         }
    }
     function deleteQuest($link) {
-        $sql = 'DELETE FROM `questions` WHERE `id` = '.$_POST['quest_num_delete'];
+        $sql = 'DELETE FROM questions WHERE id = '.$_POST['quest_num_delete'];
         $result=mysqli_query($link,$sql);
         echo $sql;
     }
-    $a=1;
     questionsOut($dbconn);
     answersOut($dbconn);
     if($_POST['submit'] and $_POST['quest_text']!='') {
@@ -97,6 +96,5 @@
         deleteQuest($dbconn);
     }
     ?>
-    
 </body>
 </html>
